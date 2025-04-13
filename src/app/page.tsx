@@ -121,7 +121,7 @@ export default function Home() {
         <MessageList />
 
         <p className="text-sm text-gray-500 pt-6 italic">
-          "Tôi xin lỗi – Hãy tha thứ cho tôi – Cảm ơn bạn – Tôi yêu bạn." – Ho'oponopono cho Trái Đất 🌱
+        &quot;Tôi xin lỗi – Hãy tha thứ cho tôi – Cảm ơn bạn – Tôi yêu bạn.&quot; – Ho&apos;oponopono cho Trái Đất 🌱
         </p>
       </div>
     </main>
