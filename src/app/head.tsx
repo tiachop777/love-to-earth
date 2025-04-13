@@ -4,7 +4,7 @@ export default function Head() {
       <>
         <title>LoveToEarth 🌍</title>
         <meta name="description" content="Lan tỏa yêu thương đến Trái Đất 💚" />
-        <link rel="icon" href="/favicon.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" />
       </>
     );
   }
