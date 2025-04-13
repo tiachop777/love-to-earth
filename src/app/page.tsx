@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Typewriter } from 'react-simple-typewriter';
 import Link from 'next/link';
@@ -47,7 +46,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5, duration: 1 }}
           >
-            “Một ánh sáng nhỏ từ trái tim bạn, có thể lan tỏa khắp hành tinh này.”
+            &ldquo;Một ánh sáng nhỏ từ trái tim bạn, có thể lan tỏa khắp hành tinh này.&rdquo;
           </motion.p>
         </section>
 
