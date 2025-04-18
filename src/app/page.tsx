@@ -7,6 +7,8 @@ import LoveForm from '../components/LoveForm';
 import MessageList from '../components/MessageList';
 import IntroSection from '../components/IntroSection';
 import IntroPurpose from '../components/IntroPurpose';
+import WhoYouArePage from '../../components/WhoYouArePage';
+import WhoYouArePreview from '../components/WhoYouArePreview';
 
 export default function Home() {
   return (
@@ -99,19 +101,8 @@ export default function Home() {
            {/* ✅ Thêm phần mục đích dự án */}
            <IntroPurpose />
 
-          {/* Nút chuyển trang */}
-          <section className="bg-white p-6 rounded-xl shadow-md text-center">
-            <h2 className="text-xl font-semibold text-green-700 mb-2">💫 Bạn là ai trong dự án LoveToEarth?</h2>
-            <p className="text-sm text-gray-600 mb-4">
-              Mỗi linh hồn mang theo một ánh sáng riêng. Hãy khám phá vai trò của bạn trong công trình chữa lành hành tinh.
-            </p>
-            <Link
-              href="/who-are-you"
-              className="bg-green-600 text-white py-2 px-6 rounded-xl hover:bg-green-700 inline-block"
-            >
-              Khám phá bản thân
-            </Link>
-          </section>
+          {/* ✨ Giới thiệu phần "Bạn là ai?" */}
+<WhoYouArePreview />
 
           {/* Form gửi lời yêu thương */}
           <motion.section
