@@ -5,8 +5,8 @@ import { Typewriter } from 'react-simple-typewriter';
 import Link from 'next/link';
 import LoveForm from '../components/LoveForm';
 import MessageList from '../components/MessageList';
-
-
+import IntroSection from '../components/IntroSection';
+import IntroPurpose from '../components/IntroPurpose';
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
             >
               <Typewriter
                 words={[
-                  'Tình yêu thương chữa lành mọi thương tổn, hàn gắn mọi vết nứt, và xóa tan mọi bóng tối.',
+                  'Tình yêu chữa lành mọi thương tổn, hàn gắn mọi vết nứt, và xóa tan mọi bóng tối.',
                   'Hãy cùng lan tỏa yêu thương, để Trái Đất được chữa lành từ trái tim nhân loại. 💚',
                 ]}
                 loop={0}
@@ -52,6 +52,9 @@ export default function Home() {
               &ldquo;Một ánh sáng nhỏ từ trái tim bạn, có thể lan tỏa khắp hành tinh này.&rdquo;
             </motion.p>
           </section>
+         
+          {/* ✅ Thêm phần giới thiệu dự án */}
+          <IntroSection />
 
           {/* Các thí nghiệm */}
           <section className="grid md:grid-cols-2 gap-6 text-left">
@@ -93,6 +96,8 @@ export default function Home() {
               </motion.div>
             ))}
           </section>
+           {/* ✅ Thêm phần mục đích dự án */}
+           <IntroPurpose />
 
           {/* Nút chuyển trang */}
           <section className="bg-white p-6 rounded-xl shadow-md text-center">

@@ -130,7 +130,7 @@ export default function LoveForm() {
         )}
 
         {reply && (
-          <div className="text-green-800 text-sm italic bg-green-50 border border-green-200 rounded-xl p-3 shadow mt-2">
+          <div className="text-green-800 text-base italic bg-green-50 border border-green-200 rounded-xl p-4 shadow mt-2">
             {reply}
           </div>
         )}

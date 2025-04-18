@@ -3,10 +3,6 @@
 import { useEffect, useState } from 'react';
 import { db } from '../firebase/firebase';
 import { collection, query, orderBy, limit, getDocs } from 'firebase/firestore';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import { Autoplay } from 'swiper/modules';
 
 export default function MessageCarousel() {
   const [messages, setMessages] = useState<string[]>([]);
@@ -28,23 +24,13 @@ export default function MessageCarousel() {
   if (messages.length === 0) return null;
 
   return (
-    <div className="mt-10 text-center">
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 4000 }}
-        loop
-        spaceBetween={0}
-        slidesPerView={1}
-        className="!overflow-visible"
-      >
+    <div className="mt-10 max-w-3xl mx-auto px-4 text-left">
+      <h3 className="text-green-700 font-semibold mb-3">🌱 10 lời yêu thương gần nhất:</h3>
+      <ul className="space-y-2 text-gray-800 text-sm md:text-base list-disc list-inside">
         {messages.map((msg, i) => (
-          <SwiperSlide key={i}>
-            <p className="italic text-green-800 text-base md:text-lg">
-              “{msg}”
-            </p>
-          </SwiperSlide>
+          <li key={i} className="italic">“{msg}”</li>
         ))}
-      </Swiper>
+      </ul>
     </div>
   );
 }
