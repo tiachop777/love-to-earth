@@ -7,7 +7,6 @@ import LoveForm from '../components/LoveForm';
 import MessageList from '../components/MessageList';
 import IntroSection from '../components/IntroSection';
 import IntroPurpose from '../components/IntroPurpose';
-import WhoYouArePage from '../../components/WhoYouArePage';
 import WhoYouArePreview from '../components/WhoYouArePreview';
 
 export default function Home() {
