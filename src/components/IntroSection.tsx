@@ -13,13 +13,14 @@ const fadeInVariants = {
 
 export default function IntroSection() {
   const paragraphs = [
-    '💚 Love to Earth – Nơi những lời chúc thành tiếng gió',
-    'Bạn đã bao giờ cảm nhận Trái Đất… thở?',
-    'Tại Love to Earth, chúng mình gom những nhịp tim hiền lành – biến chúng thành làn sóng chữa lành lan khắp hành tinh.',
-    'Mỗi khi bạn gửi đi một lời chúc, mỗi ý nghĩ thiện lành bạn ấp ủ, chính là tia sáng đan vào trường năng lượng tích cực của thế giới.',
-    'Ý tưởng này không chỉ là niềm tin – nó được khơi cảm hứng từ thí nghiệm nước của Masaru Emoto, từ những bông hoa IKEA “được khen” tươi lâu, và từ các thực hành thiền cổ xưa.',
-    'Bạn cũng có thể thử ngay: nhắm mắt, thì thầm “Cám ơn” với mặt đất dưới chân. Hãy xem bạn cảm nhận gì trong khoảnh khắc đó.',
-    'Chúng ta không cần phép màu to lớn để thay đổi thế giới, chỉ cần một hạt mầm yêu thương – bắt đầu từ bạn, tại đây, ngay bây giờ. 💚',
+    '💚 Love to Earth – Gửi một lời chúc, gieo một làn sóng yêu thương',
+    'Bạn đã bao giờ cảm thấy Trái Đất… thở cùng mình?',
+    'Có thể là lúc bạn đặt chân trần lên cỏ, hoặc thì thầm "Cảm ơn" với trời xanh. Đó là những khoảnh khắc nhỏ, nhưng lại chứa đựng kết nối rất lớn.',
+    'Love to Earth ra đời từ niềm tin giản dị ấy – rằng mỗi suy nghĩ đẹp, mỗi lời chúc chân thành, đều là một làn sóng chữa lành đang âm thầm lan tỏa.',
+    'Niềm tin này được truyền cảm hứng từ những thí nghiệm có thật: nước tạo hình đẹp khi nghe lời yêu thương, cơm lên men ngọt khi được quan tâm, cây phát triển tốt hơn khi được nói lời tử tế…',
+    'Chúng mình tin rằng cảm xúc và tư tưởng không chỉ nằm trong tâm trí – chúng thực sự có thể chạm đến thế giới vật chất, và cả Trái Đất nữa.',
+    'Bạn có thể bắt đầu từ điều nhỏ nhất: nhắm mắt, đặt tay lên tim, và thì thầm một câu "Cảm ơn" với mặt đất dưới chân bạn.',
+    'Không cần đợi phép màu. Một hạt mầm yêu thương – bắt đầu từ bạn – là đã đủ để thế giới trở nên dịu dàng hơn rồi. 💚',
   ];
 
   return (
