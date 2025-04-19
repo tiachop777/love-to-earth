@@ -153,56 +153,70 @@ export default function Quiz() {
 
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
-      <h2 className="text-xl font-bold text-green-700">
+      <h2 className="text-xl font-bold text-green-700 text-center">
         Câu {step + 1} / {questions.length}
       </h2>
-      <p className="text-gray-800 font-medium text-center">{questions[step].text}</p>
+      <p className="text-green-900 text-lg font-semibold text-center">{questions[step].text}</p>
       <p className="text-sm italic text-gray-600 text-center">
         🌿 Bạn có thể chọn từ 1 đến 3 lựa chọn phù hợp nhất với mình
       </p>
+
       <div className="grid gap-3">
-  {questions[step].options.map((opt) => {
-    const idx = selected.indexOf(opt);
-    return (
-      <label
-        key={opt}
-        className={`flex justify-between items-center bg-white rounded-xl p-4 border cursor-pointer transition-all text-center mx-auto max-w-xl ${
-          idx >= 0
-            ? 'border-green-500 ring-2 ring-green-300 bg-green-50'
-            : 'border-gray-200'
-        }`}
-        onClick={() => toggle(opt)}
-      >
-        <span className="text-gray-800 text-sm mx-auto">{opt}</span>
-        {idx >= 0 && (
-          <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
-            {idx + 1}
-          </span>
-        )}
-      </label>
-    );
-  })}
-</div>
+        {questions[step].options.map((opt) => {
+          const idx = selected.indexOf(opt);
+          return (
+            <label
+              key={opt}
+              className={`flex justify-between items-center bg-white rounded-xl p-4 border cursor-pointer transition-all text-center mx-auto max-w-xl ${
+                idx >= 0
+                  ? 'border-green-500 ring-2 ring-green-300 bg-green-50'
+                  : 'border-gray-200'
+              }`}
+              onClick={() => toggle(opt)}
+            >
+              <span className="text-gray-800 text-sm mx-auto">{opt}</span>
+              {idx >= 0 && (
+                <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                  {idx + 1}
+                </span>
+              )}
+            </label>
+          );
+        })}
+      </div>
 
+      <div className="flex flex-col items-center mt-8 space-y-4">
+        <div className="flex justify-between w-full max-w-xl">
+          {step > 0 ? (
+            <button
+              onClick={back}
+              className="px-4 py-2 bg-gray-200 rounded text-sm"
+            >
+              ← Quay lại
+            </button>
+          ) : <div />}
 
-      <div className="flex justify-between mt-6">
-        {step > 0 ? (
-          <button onClick={back} className="px-4 py-2 bg-gray-200 rounded text-sm">
-            ← Quay lại
+          <button
+            disabled={selected.length < 1}
+            onClick={next}
+            className={`px-4 py-2 rounded text-sm text-white ${
+              selected.length >= 1
+                ? 'bg-green-600 hover:bg-green-700'
+                : 'bg-gray-400 cursor-not-allowed'
+            }`}
+          >
+            {step === questions.length - 1 ? '🌟 Xem kết quả' : 'Tiếp theo →'}
           </button>
-        ) : (
-          <div />
-        )}
+        </div>
 
-        <button
-          disabled={selected.length < 1}
-          onClick={next}
-          className={`px-4 py-2 rounded text-sm text-white ${
-            selected.length >= 1 ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'
-          }`}
-        >
-          {step === questions.length - 1 ? '🌟 Xem kết quả' : 'Tiếp theo →'}
-        </button>
+        <p className="text-sm text-center text-gray-700 max-w-xl mt-2">
+          Những câu hỏi này giúp bạn khám phá bạn là ai trong dự án <strong>Love to Earth</strong>.  
+          <br />
+          Nhưng nếu bạn muốn biết thêm <em>năng lượng nào đang ảnh hưởng đến bạn</em>,  
+          hoặc bạn thực sự là <strong>ai trong thế giới rộng lớn này</strong> –  
+          hãy tiếp tục hành trình khám phá cùng chúng tôi.  
+          Khi bạn hiểu được chính mình, bạn sẽ sống một cuộc đời hạnh phúc hơn 💫
+        </p>
       </div>
     </div>
   );
