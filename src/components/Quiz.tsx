@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ArchetypeResult from '@/components/ArchetypeResult';
 
 // Hàm xáo trộn mảng
