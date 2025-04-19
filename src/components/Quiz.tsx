@@ -1,19 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ArchetypeResult from '@/components/ArchetypeResult';
 
-// Hàm xáo trộn mảng
-const shuffle = (array: string[]) => {
-  const arr = [...array];
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-};
-
-// Câu hỏi gốc
 const rawQuestions = [
   {
     text: 'Khi đối mặt với một thử thách, bạn thường...',
@@ -27,7 +16,6 @@ const rawQuestions = [
       'Biến tình huống thành câu chuyện hoặc hình ảnh truyền cảm',
     ],
   },
-  // Các câu hỏi còn lại giữ nguyên như trước
   {
     text: 'Khi bạn bước vào một căn phòng lạ, bạn thường...',
     options: [
@@ -102,17 +90,29 @@ const rawQuestions = [
   },
 ];
 
-// Xáo trộn option mỗi khi load
-const shuffledQuestions = rawQuestions.map((q) => ({
-  ...q,
-  options: shuffle(q.options),
-}));
+const shuffle = (arr: string[]) => {
+  const result = [...arr];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+};
 
 export default function Quiz() {
+  const [questions, setQuestions] = useState<typeof rawQuestions>([]);
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<number, string[]>>({});
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<string | null>(null);
+
+  useEffect(() => {
+    const shuffled = rawQuestions.map((q) => ({
+      ...q,
+      options: shuffle(q.options),
+    }));
+    setQuestions(shuffled);
+  }, []);
 
   const selected = answers[step] || [];
 
@@ -127,7 +127,7 @@ export default function Quiz() {
   };
 
   const next = () => {
-    if (step < shuffledQuestions.length - 1) {
+    if (step < questions.length - 1) {
       setStep(step + 1);
     } else {
       submit();
@@ -170,18 +170,22 @@ export default function Quiz() {
     return <ArchetypeResult reply={cleanText} archetype={archetype} />;
   }
 
+  if (questions.length === 0) return null;
+
   return (
     <div className="max-w-3xl mx-auto p-6 space-y-6">
       <h2 className="text-xl font-bold text-green-700 text-center">
-        Câu {step + 1} / {shuffledQuestions.length}
+        Câu {step + 1} / {questions.length}
       </h2>
-      <p className="text-green-900 text-lg font-semibold text-center">{shuffledQuestions[step].text}</p>
+      <p className="text-green-900 text-lg font-semibold text-center">
+        {questions[step].text}
+      </p>
       <p className="text-sm italic text-gray-600 text-center">
         🌿 Bạn có thể chọn từ 1 đến 3 lựa chọn phù hợp nhất với mình
       </p>
 
       <div className="grid gap-3">
-        {shuffledQuestions[step].options.map((opt) => {
+        {questions[step].options.map((opt) => {
           const idx = selected.indexOf(opt);
           return (
             <label
@@ -204,7 +208,7 @@ export default function Quiz() {
         })}
       </div>
 
-      <div className="flex justify-between items-center mt-8 max-w-xl mx-auto">
+      <div className="flex justify-center items-center gap-4 mt-8">
         {step > 0 && (
           <button
             onClick={back}
@@ -217,18 +221,21 @@ export default function Quiz() {
           disabled={selected.length < 1}
           onClick={next}
           className={`px-4 py-2 rounded text-sm text-white ${
-            selected.length >= 1 ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed'
+            selected.length >= 1
+              ? 'bg-green-600 hover:bg-green-700'
+              : 'bg-gray-400 cursor-not-allowed'
           }`}
         >
-          {step === shuffledQuestions.length - 1 ? '🌟 Xem kết quả' : 'Tiếp theo →'}
+          {step === questions.length - 1 ? '🌟 Xem kết quả' : 'Tiếp theo →'}
         </button>
       </div>
 
       <p className="text-sm text-center text-gray-700 max-w-xl mx-auto mt-6 leading-relaxed">
-        Những câu hỏi này giúp bạn khám phá <strong>bạn là ai</strong> trong dự án <strong>Love to Earth</strong>.
+        Những câu hỏi này giúp bạn khám phá <strong>bạn là ai</strong> trong dự án <strong>Love to Earth</strong>.  
         <br />
-        Nhưng nếu bạn muốn biết thêm <em>năng lượng nào đang ảnh hưởng đến bạn</em>,
-        hoặc bạn thực sự là <strong>ai trong thế giới rộng lớn này</strong> – hãy tiếp tục hành trình khám phá cùng chúng tôi.
+        Nhưng nếu bạn muốn biết thêm <em>năng lượng nào đang ảnh hưởng đến bạn</em>,  
+        hoặc bạn thực sự là <strong>ai trong thế giới rộng lớn này</strong> –  
+        hãy tiếp tục hành trình khám phá cùng chúng tôi.  
         <br />
         Khi bạn hiểu được chính mình, bạn sẽ sống một cuộc đời hạnh phúc hơn 💫
       </p>
