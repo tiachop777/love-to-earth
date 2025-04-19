@@ -50,6 +50,7 @@ export default function ArchetypeResult({
 
   const [copied, setCopied] = useState(false);
 
+  // Fetching archetype data or fallback data if not found
   const data = archetypeData[archetype?.trim()];
   const fallback = {
     icon: '✨',
@@ -57,6 +58,7 @@ export default function ArchetypeResult({
     quote: 'Bạn mang một ánh sáng độc đáo chưa được đặt tên – và đó chính là vẻ đẹp của bạn.',
   };
 
+  // Use data from archetypeData or fallback data if not found
   const displayData = data || fallback;
 
   const handleShare = () => {

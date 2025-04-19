@@ -45,7 +45,7 @@ export default function PreviewPage() {
 
       {reply && archetype && (
         <div className="mt-8">
-          <ArchetypeResult main={archetype} responseText={reply} />
+          <ArchetypeResult archetype={archetype} reply={reply} />
         </div>
       )}
     </div>

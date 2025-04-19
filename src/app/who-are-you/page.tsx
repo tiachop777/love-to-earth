@@ -102,13 +102,15 @@ export default function WhoAreYouPage() {
         </p>
 
         <section className="grid md:grid-cols-2 gap-6 text-left">
-          {archetypes.map((type, i) => (
+          {archetypes.map((type) => (
             <div
               key={type.title}
               className="bg-white rounded-xl shadow-md p-6 space-y-2"
             >
               <div className="text-6xl text-center">{type.emoji}</div>
-              <h2 className="text-xl font-bold text-green-700 text-center">{type.title}</h2>
+              <h2 className="text-xl font-bold text-green-700 text-center">
+                {type.title}
+              </h2>
               <p className="text-sm text-gray-700">{type.description}</p>
               {type.contribution && (
                 <p className="text-sm text-green-700 font-medium">{type.contribution}</p>
