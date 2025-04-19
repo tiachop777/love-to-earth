@@ -75,7 +75,7 @@ export default function ArchetypeDisplay({
               : 'bg-gray-400 cursor-not-allowed'
           }`}
         >
-          ✨ Bạn muốn tiếp tục hành trình khám phá bản thân?
+          ✨ Bạn muốn tiếp tục hành trình khám phá bản thân? chia sẻ bạn là ai trong dự án Love to Earth rồi quay lại đây nhé
         </button>
       </div>
 
