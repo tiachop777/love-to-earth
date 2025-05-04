@@ -14,17 +14,9 @@ export default function IntroPurpose() {
         💚 Love to Earth – Lời thì thầm với Trái Đất
       </motion.h2>
 
-      <p>Love to Earth không chỉ là một trang web.<br />Đó là một lời mời – để bạn lắng nghe Trái Đất và gửi đến hành tinh này một nhịp đập yêu thương.</p>
-
       <p>
-        Trong muôn vàn thanh âm vội vã, chúng ta gửi đi một lời chúc nhỏ –<br />
-        để nối trái tim mình với nhịp rung tinh tế của hành tinh xanh.
-      </p>
-
-      <p className="italic">Chúng mình tin rằng</p>
-      <p>
-        Mỗi suy nghĩ tích cực là một hạt mầm có thật.<br />
-        Hạt mầm ấy biết chữa lành, biết lan xa, và biết đánh thức điều tốt đẹp trong thế giới vật chất.
+      Mỗi ý niệm yêu thương là một hạt mầm có thật.<br />
+      Nó có thể chữa lành, lan tỏa, và đánh thức điều tốt đẹp quanh ta.
       </p>
 
       <p>
@@ -50,13 +42,12 @@ export default function IntroPurpose() {
       </p>
 
       <p>
-        Tình yêu không ở đâu xa.<br />
-        Nó nảy mầm từ bạn,<br />
-        ngay lúc này,<br />
-        tại đây.
+      Bởi Tình yêu bắt đầu từ bạn, <br />
+      ngay lúc này,<br />
+      ngay tại đây.<br />
       </p>
 
-      <p className="text-center font-semibold text-green-600">Hãy để Trái Đất nghe thấy nhịp tim của bạn. 💚</p>
+      <p className="text-center font-semibold text-green-600">Hãy để Trái Đất nghe thấy điều ấy. 💚</p>
     </section>
   );
 }
