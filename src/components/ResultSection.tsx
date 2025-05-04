@@ -15,7 +15,7 @@ export default function ResultSection() {
       const date = searchParams.get('date');
       const time = searchParams.get('time');
       const [hour, minute] = (time || '12:00').split(':');
-      const place = searchParams.get('place') || 'Hanoi';
+     
 
       const latitude = 21.0285; // placeholder
       const longitude = 105.8542;
