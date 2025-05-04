@@ -101,11 +101,12 @@ export default function Home() {
           ))}
         </section>
 
+       
+        
         {/* Mục đích dự án */}
         <IntroPurpose />
 
-        {/* Giới thiệu phần "Bạn là ai?" */}
-        <WhoYouArePreview />
+        
 
         {/* Form gửi lời yêu thương */}
         <motion.section
@@ -123,6 +124,11 @@ export default function Home() {
 
         {/* Danh sách lời yêu thương */}
         <MessageList />
+
+
+        {/* Giới thiệu phần "Bạn là ai?" */}
+        <WhoYouArePreview />
+
 
         {/* Trích dẫn cuối trang */}
         <p className="text-sm text-gray-500 pt-6 italic">
