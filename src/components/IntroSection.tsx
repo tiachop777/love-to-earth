@@ -14,8 +14,6 @@ const fadeInVariants = {
 export default function IntroSection() {
   const paragraphs = [
     '💚 Love to Earth – Gửi một lời chúc, gieo một làn sóng yêu thương',
-    'Bạn đã bao giờ cảm thấy Trái Đất… thở cùng mình?',
-    'Có thể là lúc bạn đặt chân trần lên cỏ, hoặc thì thầm "Cảm ơn" với trời xanh. Đó là những khoảnh khắc nhỏ, nhưng lại chứa đựng kết nối rất lớn.',
     'Love to Earth ra đời từ niềm tin giản dị ấy – rằng mỗi suy nghĩ đẹp, mỗi lời chúc chân thành, đều là một làn sóng chữa lành đang âm thầm lan tỏa.',
     'Niềm tin này được truyền cảm hứng từ những thí nghiệm có thật: nước tạo hình đẹp khi nghe lời yêu thương, cơm lên men ngọt khi được quan tâm, cây phát triển tốt hơn khi được nói lời tử tế…',
     'Chúng mình tin rằng cảm xúc và tư tưởng không chỉ nằm trong tâm trí – chúng thực sự có thể chạm đến thế giới vật chất, và cả Trái Đất nữa.',

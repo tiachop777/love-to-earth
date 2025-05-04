@@ -7,7 +7,7 @@ export default function QuizPage() {
     <main className="min-h-screen bg-gradient-to-b from-white to-green-50 p-6">
       <div className="max-w-4xl mx-auto space-y-10 text-center">
         <h1 className="text-3xl md:text-4xl font-bold text-green-800">
-          🌍 Trắc nghiệm linh hồn: Bạn là ai trong Love to Earth?
+          🌍 Trắc nghiệm: Bạn là ai trong Love to Earth?
         </h1>
 
         <p className="text-gray-700 max-w-2xl mx-auto text-base leading-relaxed">

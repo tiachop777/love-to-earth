@@ -95,7 +95,7 @@ export default function WhoAreYouPage() {
     <main className="min-h-screen bg-gradient-to-b from-white to-green-100 p-6">
       <div className="max-w-5xl mx-auto space-y-12 text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-green-800">
-          ✨ 7 Vai Trò Linh Hồn trong LoveToEarth
+          ✨ 7 Vai Trò trong LoveToEarth
         </h1>
         <p className="text-gray-700 text-lg max-w-2xl mx-auto">
           Mỗi chúng ta tỏa ra một tần số độc đáo. Hãy khám phá vai trò linh hồn bạn đang mang – và cách bạn góp phần chữa lành Trái Đất 🌍
